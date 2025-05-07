@@ -1,3 +1,28 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<main>
+    <h1>* Insert portfolio *</h1>
+</main>
+
+
+<style>
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        background: url('/assets/imgs/background-homepage.png');
+        background-position: center;
+        background-size: cover;
+
+        font-family: "Inknut Antiqua", serif;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    h1 {
+        padding: 5px;
+        font-size: 4em;
+        background-color: #1AFF2D;
+        
+    }
+</style>
