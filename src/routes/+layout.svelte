@@ -1,4 +1,7 @@
 <script>
+    import Header from "$lib/organisms/Header.svelte"
+    import Footer from "$lib/organisms/Footer.svelte"
+
     let { children } = $props();
 </script>
 
@@ -7,4 +10,8 @@
     <meta name="description" content="Anna-Kyra Strik portfolio." />
 </svelte:head>
 
+<Header />
+
 {@render children()}
+
+<Footer />
