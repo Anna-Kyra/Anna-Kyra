@@ -23,6 +23,5 @@
         padding: 5px;
         font-size: 4em;
         background-color: #1AFF2D;
-        
     }
 </style>
