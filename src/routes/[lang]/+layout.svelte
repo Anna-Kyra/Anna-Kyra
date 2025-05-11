@@ -7,6 +7,7 @@
     import { onMount } from "svelte"
 
     let { data, children } = $props()
+    let { header } = data.data
 
     onMount(() => {
         // Check if JavaScript is enabled
@@ -21,6 +22,9 @@
 		locale.set(lang)                      // Zet taal voor svelte-i18n
 		document.documentElement.lang = lang  // Zet <html lang="...">
 	});
+
+    
+    console.log(header)
 </script>
 
 <svelte:head>
@@ -28,8 +32,8 @@
     <meta name="description" content="Anna-Kyra Strik portfolio." />
 </svelte:head>
 
-<Header />
-
+<Header {header} />
+{header.navItems[0].name}
 {@render children()}
 
 <Footer />

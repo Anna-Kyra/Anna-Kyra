@@ -5,11 +5,11 @@
 	import getCurrentPage from '$lib/utils/getCurrentPage';
 
 	import { page } from '$app/state';
+	let { header = []} = $props();
 
 	const currentLang = $derived(page.params.lang || 'en');
 	const currentPage = $derived(getCurrentPage(page.url.pathname, page.params.lang));
 
-	// console.log(currentPage)
 </script>
 
 <header>
@@ -18,9 +18,9 @@
     </a>
 
     <Nav>
-		<NavItem active={currentPage === 'projects'} href="/{currentLang}/projects">Projects</NavItem>
-		<NavItem active={currentPage === 'about'} href="/{currentLang}/about">About</NavItem>
-		<NavItem active={currentPage === 'contact'} href="/{currentLang}/contact">Contact</NavItem>
+		<NavItem active={currentPage === 'projects'} href="/{currentLang}/projects">{header.navItems[0].name}</NavItem>
+		<NavItem active={currentPage === 'about'} href="/{currentLang}/about">{header.navItems[1].name}</NavItem>
+		<NavItem active={currentPage === 'contact'} href="/{currentLang}/contact">{header.navItems[2].name}</NavItem>
 	</Nav>
 
 	<a href="/{currentLang === 'en' ? 'nl' : 'en'}/{currentPage}">

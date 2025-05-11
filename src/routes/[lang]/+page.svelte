@@ -3,8 +3,6 @@
 
     let { data } = $props()
     let { page } = data.data
-
-    console.log(page)
 </script>
 
 <main>
