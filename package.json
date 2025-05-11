@@ -52,6 +52,7 @@
 		"env-cmd": "^10.1.0",
 		"graphql": "^16.11.0",
 		"graphql-request": "^7.1.2",
+		"svelte-i18n": "^4.0.1",
 		"three": "^0.176.0"
 	}
 }
