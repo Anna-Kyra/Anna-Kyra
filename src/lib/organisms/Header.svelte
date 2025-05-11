@@ -6,18 +6,20 @@
 
 	import { page } from '$app/state';
 
-	let currentPage = $derived(getCurrentPage(page.url.pathname));		
-    console.log(getCurrentPage)
+	const currentLang = $derived(page.params.lang || 'en');
+	const currentPage = $derived(getCurrentPage(page.url.pathname));	
+
 </script>
 
 <header>
-    <a href="/">
+    <a href="/{currentLang}">
         <h1>insert logo</h1>
     </a>
 
     <Nav>
-		<NavItem active={currentPage === 'projects'} href="/">Projects</NavItem>
-		<NavItem active={currentPage === 'about'} href="/about">About</NavItem>
-		<NavItem active={currentPage === 'contact'} href="/contact">Contact</NavItem>
+		<NavItem active={currentPage === 'projects'} href="/{currentLang}/projects">Projects</NavItem>
+		<NavItem active={currentPage === 'about'} href="/{currentLang}/about">About</NavItem>
+		<NavItem active={currentPage === 'contact'} href="/{currentLang}/contact">Contact</NavItem>
 	</Nav>
+
 </header>
