@@ -8,10 +8,11 @@
 
 <footer>
     <h2>{footer.title}</h2>
-    {#each social as social (social)}
-        <a href={social.url}>{social.name}</a>
-        <br>
-    {/each}
+	<ul>
+		{#each social as social (social)}
+			<li><a target="_blank" href="{social.url}">{social.name}</a></li>
+		{/each}
+	</ul>
     <p>{footer.copyright}</p>
 
     {footer.social[0].id}
