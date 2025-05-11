@@ -4,13 +4,13 @@
     let { data } = $props()
     let { page } = data.data
 
-    console.log(page.title)
+    console.log(page)
 </script>
 
 <main>
     <section class="hero">
-        <h2>hier kom ik te staan</h2>
-        {page.description}
+        <h1>{page.description}</h1>
+        
         <Portret />
     </section>
     <section>
@@ -29,7 +29,6 @@
         </ul>
     </section>
 </main>
-
 
 <style>
 

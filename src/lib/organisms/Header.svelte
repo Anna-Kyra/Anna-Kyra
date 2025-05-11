@@ -7,8 +7,9 @@
 	import { page } from '$app/state';
 
 	const currentLang = $derived(page.params.lang || 'en');
-	const currentPage = $derived(getCurrentPage(page.url.pathname));	
+	const currentPage = $derived(getCurrentPage(page.url.pathname, page.params.lang));
 
+	// console.log(currentPage)
 </script>
 
 <header>
@@ -21,5 +22,10 @@
 		<NavItem active={currentPage === 'about'} href="/{currentLang}/about">About</NavItem>
 		<NavItem active={currentPage === 'contact'} href="/{currentLang}/contact">Contact</NavItem>
 	</Nav>
+
+	<a href="/{currentLang === 'en' ? 'nl' : 'en'}/{currentPage}">
+		{currentLang === 'nl' ? 'EN' : 'NL'}
+	</a>
+	
 
 </header>
