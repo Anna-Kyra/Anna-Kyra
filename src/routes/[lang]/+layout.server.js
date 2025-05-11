@@ -20,6 +20,16 @@ const query = gql`
                 }
             }
         }
+        footer(where: {id: "cmak1oldlyrqp07mhuqh6djp7"}, locales: [$locale]) {
+            social {
+                name
+                url
+                logo {
+                    url
+                }
+            }
+            title
+        }
     }
 `;
 export async function load({ params }) {
