@@ -15,6 +15,7 @@ const query = gql`
             }
             socials {
                 name
+                url
                 logo {
                     url
                 }
@@ -22,6 +23,7 @@ const query = gql`
         }
         footer(where: {id: "cmak1oldlyrqp07mhuqh6djp7"}, locales: [$locale]) {
             social {
+                id
                 name
                 url
                 logo {
@@ -29,6 +31,7 @@ const query = gql`
                 }
             }
             title
+            copyright
         }
     }
 `;

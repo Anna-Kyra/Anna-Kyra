@@ -8,6 +8,7 @@
 
     let { data, children } = $props()
     let { header } = data.data
+    let { footer } = data.data
 
     onMount(() => {
         // Check if JavaScript is enabled
@@ -22,9 +23,8 @@
 		locale.set(lang)                      // Zet taal voor svelte-i18n
 		document.documentElement.lang = lang  // Zet <html lang="...">
 	});
-
     
-    console.log(header)
+    // console.log(footer)
 </script>
 
 <svelte:head>
@@ -36,4 +36,4 @@
 {header.navItems[0].name}
 {@render children()}
 
-<Footer />
+<Footer {footer} />
