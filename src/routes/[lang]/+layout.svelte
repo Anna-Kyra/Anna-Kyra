@@ -33,7 +33,7 @@
 </svelte:head>
 
 <Header {header} />
-{header.navItems[0].name}
+
 {@render children()}
 
 <Footer {footer} />
