@@ -9,7 +9,7 @@ const query = gql`
             slug
             description
         }
-        projects {
+        projects(locales: [$locale]) {
             coverImage {
                 url
             }
