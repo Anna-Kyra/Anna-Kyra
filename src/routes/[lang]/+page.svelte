@@ -2,13 +2,16 @@
     import Portret from "$lib/molecules/Portret.svelte"
 
     let { data } = $props()
-    let { page } = data
+    let { page } = data.data
+
+    console.log(page.title)
 </script>
 
 <main>
     <section class="hero">
         <h2>hier kom ik te staan</h2>
-        <!-- <Portret /> -->
+        {page.description}
+        <Portret />
     </section>
     <section>
         <h2>"Insert quote"</h2>
