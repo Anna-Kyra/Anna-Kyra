@@ -33,18 +33,19 @@ const query = gql`
     }
 `;
 export async function load({ params }) {
-    const localeMap = {
-        nl: 'nl_NL',
-        en: 'en'
-    };
+	const localeMap = {
+		nl: 'nl_NL',
+		en: 'en'
+	};
 
-    const lang = params.lang || 'en';
-    const locale = localeMap[lang] || 'en';
+	const lang = params.lang || 'en';
+	const locale = localeMap[lang] || 'en';
 
-    const data = await hygraph.request(query, { locale });
+	const data = await hygraph.request(query, { locale });
 
-    return {
+	return {
         data,
-        locale
-    };
+		lang,     // ← voeg dit toe
+		locale    // eventueel ook nuttig
+	};
 }
