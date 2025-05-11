@@ -6,16 +6,21 @@
     import { locale } from 'svelte-i18n'
     import { onMount } from "svelte"
 
-    let { children } = $props()
+    let { data, children } = $props()
 
     onMount(() => {
         // Check if JavaScript is enabled
         if (typeof window !== 'undefined' && typeof window.document !== 'undefined') {
             javascript.enabled = true
         }
-
-        locale.set(data.locale)
     })
+
+	$effect(() => {
+		const lang = data.lang
+
+		locale.set(lang)                      // Zet taal voor svelte-i18n
+		document.documentElement.lang = lang  // Zet <html lang="...">
+	});
 </script>
 
 <svelte:head>

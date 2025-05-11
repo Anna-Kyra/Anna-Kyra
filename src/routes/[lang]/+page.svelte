@@ -1,9 +1,8 @@
 <script>
     import Portret from "$lib/molecules/Portret.svelte"
 
-    export let data
-
-    const { page } = data
+    let { data } = $props()
+    let { page } = data
 </script>
 
 <main>
