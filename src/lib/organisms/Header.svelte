@@ -32,7 +32,7 @@
 		<NavItem active={currentPage === 'contact'} href="/{currentLang}/contact">{header.navItems[2].name}</NavItem>
 	</Nav>
 
-	<a href="/{currentLang === 'en' ? 'nl' : 'en'}/{currentPage}">
+	<a data-sveltekit-reload href="/{currentLang === 'en' ? 'nl' : 'en'}/{currentPage}">
 		{currentLang === 'nl' ? 'EN' : 'NL'}
 	</a>
 	
