@@ -37,6 +37,21 @@ const query = gql`
 				height 
 			}
 		}
+		projects(
+			where: {selected: true}
+			locales: [$locale]
+		) {
+			title
+			slug
+			coverImage {
+				url
+				width
+				height
+			}
+			date
+			description
+			type
+		}
 	}
 `;
 
