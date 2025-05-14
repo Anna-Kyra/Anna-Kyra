@@ -12,6 +12,8 @@ const query = gql`
         projects(locales: [$locale]) {
             coverImage {
                 url
+                width
+                height
             }
             date
             slug
@@ -25,6 +27,8 @@ const query = gql`
             techStack {
                 logo {
                     url
+                    width
+                    height
                 }
                 name
                 type

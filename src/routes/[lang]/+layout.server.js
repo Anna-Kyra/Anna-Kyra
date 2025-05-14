@@ -18,6 +18,8 @@ const query = gql`
                 url
                 logo {
                     url
+                    width
+                    height
                 }
             }
         }
@@ -28,6 +30,8 @@ const query = gql`
                 url
                 logo {
                     url
+                    width
+                    height
                 }
             }
             title

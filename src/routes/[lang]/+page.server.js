@@ -9,8 +9,15 @@ const query = gql`
 			slug
 			description
 			content {
-				image { url }
-				video { url }
+				image { 
+					url
+					width
+					height
+				}
+				video { 
+					url
+					size 
+				}
 				title
 				contentMarkdown
 			}
@@ -19,8 +26,16 @@ const query = gql`
 				linkTitle
 				url
 			}
-			image { url }
-			video { url }
+			image { 
+				url
+				width
+				height 
+			}
+			video { 
+				url
+				width
+				height 
+			}
 		}
 	}
 `;

@@ -19,17 +19,25 @@ const query = gql`
                 type
                 logo {
                     url
+                    width
+                    height
                 }
             }
             coverImage {
                 url
+                width
+                height
             }
             content {
                 image {
                     url
+                    width
+                    height
                 }
                 video {
                     url
+                    width
+                    height
                 }
                 title
                 contentMarkdown
