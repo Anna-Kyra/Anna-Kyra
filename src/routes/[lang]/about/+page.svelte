@@ -8,5 +8,11 @@
 </script>
 
 <main>
-    <h1>About</h1>
+    <h1>{page.title}</h1>
+    <p>{page.description}</p>
+    <ul>
+        {#each techStacks as techStack}
+            <li>{techStack.name}</li>
+        {/each}
+    </ul>
 </main>
