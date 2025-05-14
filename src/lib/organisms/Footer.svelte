@@ -2,8 +2,6 @@
     import { page } from '$app/state';
 	let { footer = []} = $props();
     let { social } = footer
-
-    console.log(footer.social)
 </script>
 
 <footer>

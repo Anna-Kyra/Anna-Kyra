@@ -1,14 +1,14 @@
 <script>
     import { page } from '$app/state';
     let { data } = $props()
-    let pages = data.data.page
+    let pageData = data.data.page
     let { projects } = data.data
 
-    console.log(page.url)
+    console.log(projects)
 </script>
 
 <main>
-    <h1>{pages.title}</h1>
+    <h1>{pageData.title}</h1>
     <ul>
 		{#each projects as project}
 			<li>
