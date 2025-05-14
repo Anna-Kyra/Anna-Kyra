@@ -34,6 +34,14 @@ const query = gql`
                 type
             }
         }
+        projectSorts {
+            type
+            logo {
+                url
+                height
+                width
+            }
+        }
     }
 `;
 

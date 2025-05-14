@@ -3,20 +3,41 @@
     let { data } = $props()
     let pageData = data.data.page
     let { projects } = data.data
+    let { projectSorts } = data.data
 
-    console.log(projects)
+    console.log(projectSorts)
 </script>
 
 <main>
-    <h1>{pageData.title}</h1>
-    <ul>
-		{#each projects as project}
-			<li>
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
-                <img src="{project.coverImage.url}" alt="{project.title}" width="100" height="100">
-                <a href="{page.url.pathname}{project.slug}">{project.slug}</a>
-            </li>
-		{/each}
-	</ul>
+    <section>
+        <h1>{pageData.title}</h1>
+        <p>{pageData.description}</p>
+        {#each projectSorts as projectSort}
+            <ul>
+                <li><button>{projectSort.type}</button></li>
+            </ul>
+        {/each}
+    </section>
+    <section>
+        <h2>Filter</h2>
+        {#each projectSorts as projectSort}
+            <ul>
+                <li><button>{projectSort.type}</button></li>
+            </ul>
+        {/each}
+    </section>
+    <section>
+        <ul>
+            {#each projects as project}
+                <li>
+                    <h2>{project.title}</h2>
+                    <p>{project.description}</p>
+                    <img src="{project.coverImage.url}" alt="{project.title}" width="{project.coverImage.width}" height="{project.coverImage.height}">
+                    <time datetime="{project.date}">{project.date}</time>
+                    <p>{project.type}</p>
+                    <a href="{page.url.pathname}{project.slug}">Zie meer</a>
+                </li>
+            {/each}
+        </ul>
+    </section>
 </main>

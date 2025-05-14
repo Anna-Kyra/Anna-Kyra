@@ -22,10 +22,12 @@
         <h2>{pageData.content[0].title}</h2>
         {#each projects as project}
 			<li>
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
                 <img src="{project.coverImage.url}" alt="{project.title}" width="{project.coverImage.width}" height="{project.coverImage.height}">
-                <a href="{page.url.pathname}{project.slug}">{project.title}</a>
+                <h2>{project.title}</h2>
+                <time datetime="{project.date}">{project.date}</time>
+                <p>{project.description}</p>
+                <p>{project.type}</p>
+                <a href="{page.url.pathname}{project.slug}">Zie meer</a>
             </li>
 		{/each}
     </sections>
