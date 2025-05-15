@@ -53,13 +53,13 @@ const query = gql`
 			type
 		}
 	}
-`
+`;
 
 export async function load({ params }) {
 	const localeMap = {
 		nl: 'nl_NL',
 		en: 'en'
-	}
+	};
 
 	const lang = params.lang || 'en';
 	const locale = localeMap[lang] || 'en';
@@ -69,5 +69,5 @@ export async function load({ params }) {
 	return {
 		data,
 		locale
-	}
+	};
 }

@@ -1,5 +1,6 @@
-import { gql } from 'graphql-request'
-import { hygraph } from '$lib/utils/hygraph.js'
+// src/routes/[lang]/+page.server.js
+import { gql } from 'graphql-request';
+import { hygraph } from '$lib/utils/hygraph.js';
 
 const query = gql`
     query About($locale: Locale!) {
