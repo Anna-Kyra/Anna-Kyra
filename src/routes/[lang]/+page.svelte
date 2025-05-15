@@ -27,7 +27,7 @@
                 <time datetime="{project.date}">{project.date}</time>
                 <p>{project.description}</p>
                 <p>{project.type}</p>
-                <a href="{page.url.pathname}{project.slug}">Zie meer</a>
+                <a href="{page.url.pathname}projects/{project.slug}">Zie meer</a>
             </li>
 		{/each}
     </sections>
