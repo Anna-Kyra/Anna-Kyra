@@ -4,7 +4,7 @@
 
 <li>
 	{#if active}
-		<h1>{@render children()}</h1>
+		<h2>{@render children()}</h2>
 	{:else if href}
 		<a {href} class="focus-ring">{@render children()}</a>
 	{:else}
