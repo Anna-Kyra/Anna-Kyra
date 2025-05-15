@@ -15,6 +15,6 @@ export default function getCurrentPage(pathname, lang = 'en') {
 		case '/contact':
 			return 'contact';
 		default:
-			return 'other';
+			return stripped.startsWith('/') ? stripped.slice(1) : stripped;
 	}
 }
