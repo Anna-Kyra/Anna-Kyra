@@ -1,6 +1,5 @@
-// src/routes/[lang]/+page.server.js
-import { gql } from 'graphql-request';
-import { hygraph } from '$lib/utils/hygraph.js';
+import { gql } from 'graphql-request'
+import { hygraph } from '$lib/utils/hygraph.js'
 
 const query = gql`
     query Projects($locale: Locale!) {
@@ -43,7 +42,7 @@ const query = gql`
             }
         }
     }
-`;
+`
 
 export async function load({ params }) {
     const localeMap = {
@@ -51,13 +50,13 @@ export async function load({ params }) {
         en: 'en'
     };
 
-    const lang = params.lang || 'en';
-    const locale = localeMap[lang] || 'en';
+    const lang = params.lang || 'en'
+    const locale = localeMap[lang] || 'en'
 
-    const data = await hygraph.request(query, { locale });
+    const data = await hygraph.request(query, { locale })
 
     return {
         data,
         locale
-    };
+    }
 }

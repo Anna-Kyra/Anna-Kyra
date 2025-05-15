@@ -3,18 +3,18 @@ export default function getCurrentPage(pathname, lang = 'en') {
 	const cleaned = pathname.replace(/\/$/, '');
 
 	// Verwijder de taal prefix zoals `/en`, `/nl`, etc.
-	const stripped = cleaned.replace(new RegExp(`^/${lang}`), '');
+	const stripped = cleaned.replace(new RegExp(`^/${lang}`), '')
 
 	switch (stripped) {
 		case '':
-			return '';
+			return ''
 		case '/projects':
-			return 'projects';
+			return 'projects'
 		case '/about':
-			return 'about';
+			return 'about'
 		case '/contact':
-			return 'contact';
+			return 'contact'
 		default:
-			return stripped.startsWith('/') ? stripped.slice(1) : stripped;
+			return stripped.startsWith('/') ? stripped.slice(1) : stripped
 	}
 }

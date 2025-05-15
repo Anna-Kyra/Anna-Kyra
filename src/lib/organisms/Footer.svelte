@@ -1,6 +1,6 @@
 <script>
-    import { page } from '$app/state';
-	let { footer = []} = $props();
+    import { page } from '$app/state'
+	let { footer = []} = $props()
     let { social } = footer
 </script>
 
