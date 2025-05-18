@@ -1,3 +1,10 @@
+
+| Dev site                             | Live site                         |
+| :----------------------------------- | :-------------------------------- |
+| https://dev--anna-kyra.netlify.app/  | https://anna-kyra.netlify.app/    |
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ee38478f-9c39-4fce-b1a6-e7c0d63336d9/deploy-status)](https://app.netlify.com/projects/anna-kyra/deploys)
+<!--
 # Svelte library
 
 Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
@@ -56,3 +63,4 @@ To publish your library to [npm](https://www.npmjs.com):
 ```bash
 npm publish
 ```
+-->
