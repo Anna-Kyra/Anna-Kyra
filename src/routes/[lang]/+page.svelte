@@ -37,10 +37,6 @@
 </main>
 
 <style>
-    main {
-        display: flex;
-        flex-direction: column;
-    }
     section {
         display: flex;
         flex-direction: column;
@@ -49,10 +45,6 @@
 
         padding: 2rem;
         background-color: hotpink;
-    }
-
-    ul {
-        list-style: none;
     }
 
     .hero {

@@ -18,7 +18,7 @@
             </ul>
         {/each}
     </section>
-    <section>
+    <section class="filter">
         <h2>Filter</h2>
         {#each projectSorts as projectSort}
             <ul>
@@ -26,7 +26,7 @@
             </ul>
         {/each}
     </section>
-    <section>
+    <section class="work">
         <ul>
             {#each projects as project}
                 <li>
@@ -41,3 +41,43 @@
         </ul>
     </section>
 </main>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        padding: 2rem;
+        background-color: hotpink;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .filter {
+        position: sticky;
+        top: 6rem;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    .filter ul {
+        flex-direction: row;
+    }
+</style>
