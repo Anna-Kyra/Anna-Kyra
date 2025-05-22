@@ -35,9 +35,24 @@
     box-sizing: border-box;
 }
 
-body {
+body > div {
 	font-size: 16px;
 	line-height: 1.2;
+
+	/* footer on bottom */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+
+/* footer on bottom */
+main {
+	flex: 1;
+}
+
+footer {
+	margin-top: auto;
 }
 
 /*-----------------
