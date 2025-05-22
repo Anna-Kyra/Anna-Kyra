@@ -15,3 +15,17 @@
         <p>{page.description}</p>
     </section>
 </main>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    section:nth-of-type(2) {
+        align-items: center;
+        flex-direction: row;
+    }
+</style>
