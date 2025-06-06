@@ -15,7 +15,7 @@
         
         <Portret />
     </section>
-    <section>
+    <section class="quote">
         <h2>{pageData.quote}</h2>
     </section>
     <section class="selected-work">
@@ -24,11 +24,13 @@
             {#each projects as project}
                 <li>
                     <img src="{project.coverImage.url}" alt="{project.title}" width="{project.coverImage.width}" height="{project.coverImage.height}">
-                    <h2>{project.title}</h2>
-                    <time datetime="{project.date}">{project.date}</time>
-                    <p>{project.description}</p>
-                    <p>{project.type}</p>
-                    <a href="{page.url.pathname}projects/{project.slug}">Zie meer</a>
+                    <div>
+                        <h2>{project.title}</h2>
+                        <time datetime="{project.date}">{project.date}</time>
+                        <p>{project.description}</p>
+                        <p>{project.type}</p>
+                        <a href="{page.url.pathname}projects/{project.slug}">Zie meer</a>
+                    </div>  
                 </li>
             {/each}
         </ul>
@@ -47,9 +49,20 @@
         background-color: hotpink;
     }
 
+    .quote {
+        flex-direction: row;
+    }
+
     .hero {
-        height: calc(100vh - 6rem);
+        height: 100vh;
         justify-content: center;
         background-color: aqua;
+    }
+
+    li {
+        display: flex;
+        flex-direction: row;
+        flex-direction: row-reverse;
+        gap: 2rem;
     }
 </style>

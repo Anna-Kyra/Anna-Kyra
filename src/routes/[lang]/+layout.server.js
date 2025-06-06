@@ -2,7 +2,7 @@ export const prerender = false
 export const trailingSlash = "always"
 export const csr = true
 
-// Detecteert en valideert taal uit de URL
+
 import { gql } from 'graphql-request';
 import { hygraph } from '$lib/utils/hygraph.js';
 
